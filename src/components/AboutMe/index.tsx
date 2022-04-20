@@ -1,37 +1,59 @@
 import { Button } from "../Button";
 import { Container } from "./style";
 
-import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 export function AboutMe() {
   return (
-    <Container>
+    <Container id='about-me'>
       <div className="content">
         <img className="imageProfile" src="./images/foto.png" alt="" />
-      <article>
-        <h1>Sobre Mim</h1>
+        <article>
+          <h1>Sobre Mim</h1>
 
-        <h2>Pirapora, Minas Gerais</h2>
+          <h2>Pirapora, Minas Gerais</h2>
 
-        <p>
-          Tive meu primeiro contato com o desenvolvimento web aos meus 14 anos,
-          porém na época não tive a possibilidade de continuar meus estudos.
-          Alguns anos se passaram e aqui estou eu, me tornei um desenvolver front-end. Atualmente densenvolvo minhas aplicações utilizando
-          ReactJs.
-        </p>
+          <p>
+            Tive meu primeiro contato com o desenvolvimento web aos meus 14
+            anos, porém na época não tive a possibilidade de continuar meus
+            estudos. Alguns anos se passaram e aqui estou eu, me tornei um
+            desenvolver front-end. Atualmente densenvolvo minhas aplicações
+            utilizando ReactJs.
+          </p>
 
-        <ul>
-          <li><a href=""><BsInstagram /></a></li>
-          <li><a href=""><BsGithub /></a></li>
-          <li><a href=""><BsLinkedin /></a></li>
-        </ul>
-        <div className="wrapper-buttons">
-          <Button color='pink' link="/files/Currículo.pdf" imgURL="./images/download-cloud.svg" text="Currículo"/>
-          <Button color='blue' link="mailto:juansanjuan.dev@gmail.com" imgURL="./images/mail.svg" text="Email"/>
-        </div>
-      </article>
+          <ul>
+            <li>
+              <a href="">
+                <BsInstagram />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <BsGithub />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <BsLinkedin />
+              </a>
+            </li>
+          </ul>
+          <div className="wrapper-buttons">
+            <Button
+              color="pink"
+              link="/files/Currículo.pdf"
+              imgURL="./images/download-cloud.svg"
+              text="Currículo"
+            />
+            <Button
+              color="blue"
+              link="mailto:juansanjuan.dev@gmail.com"
+              imgURL="./images/mail.svg"
+              text="Email"
+            />
+          </div>
+        </article>
       </div>
-      
     </Container>
   );
 }

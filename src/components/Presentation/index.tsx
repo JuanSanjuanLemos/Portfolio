@@ -3,7 +3,7 @@ import { Container } from "./style";
 
 export function Presentation(){
   return(
-    <Container>
+    <Container id="home">
       <div className="presentation-content">
         <div className="wrapper-texts">
           <h2>OLÁ, EU SOU</h2> <br />

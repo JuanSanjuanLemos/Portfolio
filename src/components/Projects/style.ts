@@ -5,7 +5,7 @@ export const Container = styled.section`
 
   max-width: 1440px;
   margin: auto;
-  padding: 6.25rem 0;
+  padding: 6.25rem 1rem;
 
   .content {
     max-width: 1160px;
@@ -20,20 +20,25 @@ export const Container = styled.section`
   
   .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 530px));
+    grid-template-columns: repeat(2, minmax(292px, 530px));
     justify-content: space-between;
     column-gap: 20px;
     row-gap: 5rem;
 
     margin-top: 3.75rem;
   }
+
+  @media (max-width: 768px) {
+    .grid{
+      grid-template-columns: repeat(1, minmax(292px, 530px)) ;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Card = styled.article`
   .project-image{
-    width: 100%;
     margin-bottom: 2.5rem;
-
     border-left: 4px solid var(--blue);
     border-radius: 4px 0px 0px 4px;
 

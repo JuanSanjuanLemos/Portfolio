@@ -1,20 +1,30 @@
 import { createGlobalStyle } from "styled-components/";
 
-export const GlobalStyle = createGlobalStyle`
-    :root {
-    --main-color: #121212;
-    --main-color-200: #151515;
-    --text: #fff;
-    --text-second: #c4c4c4;
-    --blue: #00D2DF;
-    }
+interface ThemeStyle{
+    mainColor: string;
+    mainColor200: string;
+    text: string;
+    textSecond: string;
+    blue: string;
+}
 
+export const GlobalStyle = createGlobalStyle<{theme : ThemeStyle}>`
+    :root {
+    --main-color: ${({ theme }) => theme.mainColor};
+    --main-color-200: ${({ theme }) => theme.mainColor200};
+    --text: ${({ theme }) => theme.text};
+    --text-second: ${({ theme }) => theme.textSecond};
+    --blue: ${({ theme }) => theme.blue};
+    }
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
+    html{
+        scroll-behavior: smooth;
+    }
 
     @media(max-width: 1080px){
         html{
@@ -44,4 +54,43 @@ export const GlobalStyle = createGlobalStyle`
         color: inherit;
     }
 
+    .button-theme{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        text-align: center;
+        &.-dark{
+            background-color: #fff;
+        }
+        &.-light{
+            background-color: #000;
+        }
+    }
+
+    @media (max-width: 768px){
+        .button-theme{
+            margin-left: 1rem;
+            &.-dark{
+                background-color: #000;
+        }
+            &.-light{
+                background-color: #fff;
+            }
+        }
+    }
 `;
+
+export const lightTheme = {
+  mainColor: "#ebebeb",
+  mainColor200: "#c4c4c4",
+  text: "#121212",
+  textSecond: "#151515",
+  blue: '#2236c5'
+};
+export const darkTheme = {
+  mainColor: "#121212",
+  mainColor200: "#151515",
+  text: "#fff",
+  textSecond: "#c4c4c4",
+  blue: '#00D2DF'
+};

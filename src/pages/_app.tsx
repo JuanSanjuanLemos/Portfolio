@@ -1,12 +1,15 @@
 import type { AppProps } from 'next/app';
-import { GlobalStyle } from '../styles/global';
+import { ChakraProvider } from '@chakra-ui/react';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return(
-    <>
+    <ChakraProvider>
+      <Head>
+        <title>Portfólio</title>
+      </Head>
       <Component {...pageProps} />
-      <GlobalStyle />
-    </>
+    </ChakraProvider>
   )
 }
 

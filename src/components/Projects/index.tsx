@@ -3,7 +3,7 @@ import { Container } from "./style";
 
 export function Projects() {
   return (
-    <Container>
+    <Container id='projects'>
       <div className="content">
         <h1>Projetos</h1>
 

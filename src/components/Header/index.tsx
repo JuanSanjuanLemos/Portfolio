@@ -1,15 +1,70 @@
+import {
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { Container } from "./style";
 
-export function Header(){
-  return(
+import { BsList } from "react-icons/bs";
+import { ReactNode, useState } from "react";
+
+interface HeaderProps{
+  children: ReactNode;
+}
+
+export function Header({children}:HeaderProps) {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    md: true,
+  });
+
+  return (
     <Container>
-      <p className="logo">Portfólio</p>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre mim</a></li>
-        <li><a href="#">Experiência</a></li>
-        <li><a href="#">Projetos</a></li>
-      </ul>
+      <div className="content">
+        <p className="logo">Portfólio</p>
+        {isWideVersion ? (
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about-me">Sobre mim</a>
+            </li>
+            <li>
+              <a href="#projects">Projetos</a>
+            </li>
+            <li>
+              {children}
+            </li>
+          </ul>
+        ) : (
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              variant="unstyled"
+              className="button-menu"
+              fontSize="2rem"
+              icon={<BsList />}
+            />
+            <MenuList className="wrapper-menu">
+              <MenuItem>
+                <a href="#home">Home</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="#about-me">Sobre mim</a>
+              </MenuItem>
+              <MenuItem>
+                <a href="#projects">Projetos</a>
+              </MenuItem>
+                {children}
+            </MenuList>
+          </Menu>
+        )}
+      </div>
     </Container>
-  )
+  );
 }
