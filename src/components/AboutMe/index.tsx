@@ -1,13 +1,21 @@
-import { Button } from "../Button";
 import { Container } from "./style";
 
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
+import { Button } from "../Button";
+import Image from "next/image";
+
 export function AboutMe() {
   return (
-    <Container id='about-me'>
+    <Container id="about-me">
       <div className="content">
-        <img className="imageProfile" src="./images/foto.png" alt="" />
+        <div className="imageProfile">
+          <Image
+            layout="fill"
+            src="/images/foto.png"
+            alt="Foto Juan"
+          />
+        </div>
         <article>
           <h1>Sobre Mim</h1>
 
@@ -42,13 +50,13 @@ export function AboutMe() {
             <Button
               color="pink"
               link="/files/Currículo.pdf"
-              imgURL="./images/download-cloud.svg"
+              imgURL="/images/download-cloud.svg"
               text="Currículo"
             />
             <Button
               color="blue"
               link="mailto:juansanjuan.dev@gmail.com"
-              imgURL="./images/mail.svg"
+              imgURL="/images/mail.svg"
               text="Email"
             />
           </div>

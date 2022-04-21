@@ -1,4 +1,5 @@
-import { ButtonBlue, ButtonPink } from "./style";
+import Image from "next/image";
+import { ButtonLink } from "./style";
 
 interface ButtonProps{
   color: string;
@@ -8,28 +9,12 @@ interface ButtonProps{
 }
 
 export function Button({color, text,link, imgURL}:ButtonProps){
-  if (color === 'pink'){
-    return(
-      <ButtonPink >
-        <img src={imgURL} alt={text} />
-        <a href={link} target='_blank'>{text}</a>
-      </ButtonPink>
-    )
-  }
-
-  if (color === 'blue'){
-    return(
-      <ButtonBlue>
-        <img src={imgURL} alt={text} />
-        <a href={link} target='_blank'>{text}</a>
-      </ButtonBlue>
-    )
-  }
-
   return(
-    <button>
-      {text}
-    </button>
+    <a href={link} rel="noopener noreferrer" target='_blank'>
+      <ButtonLink className={color=== 'blue' ? '-button-blue' : '-button-pink'}>
+        <Image height='24px' width='24px' src={imgURL} alt={text} />
+        {text}
+      </ButtonLink>
+    </a>
   )
-
 }

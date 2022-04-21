@@ -6,10 +6,11 @@ import {
   MenuList,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { Container } from "./style";
 
 import { BsList } from "react-icons/bs";
 import { ReactNode, useState } from "react";
+
+import { Container } from "./style";
 
 interface HeaderProps{
   children: ReactNode;

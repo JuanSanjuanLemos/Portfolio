@@ -20,6 +20,7 @@ export const Container = styled.section`
       width: 20.4rem;
       border-left: 4px solid var(--blue);
       border-radius: 4px 0px 0px 4px;
+      position: relative;
     }
 
     article {

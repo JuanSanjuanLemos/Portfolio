@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const button = `
+export const ButtonLink = styled.button`
   position:relative;
   display: flex;
   align-items: center;
@@ -22,18 +22,16 @@ const button = `
   font-weight: 600;
   line-height: 1.18;
   color: var(--text);
-`;
 
-export const ButtonPink = styled.button`
-  ${button};
-  border-image: linear-gradient(
-    132.33deg,
-    #d24074 -0.67%,
-    #6518b4 102.54%
-  ) 1;
-`;
+  &.-button-pink{
+    border-image: linear-gradient(
+      132.33deg,
+      #d24074 -0.67%,
+      #6518b4 102.54%
+    ) 1;
+  }
 
-export const ButtonBlue = styled.button`
-  ${button};
-  border-image: linear-gradient(51.06deg, #9358f7 0.87%, #10d7e2 97.48%) 1;
+  &.-button-blue{
+    border-image: linear-gradient(51.06deg, #9358f7 0.87%, #10d7e2 97.48%) 1;
+  }
 `;
