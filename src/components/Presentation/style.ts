@@ -4,7 +4,7 @@ export const Container = styled.section`
   background-image: url('/images/bg-image.svg');
   background-repeat: no-repeat;
   background-position: 100% -0;
-
+  background-color: var(--main-color);
   max-width: 1440px;
 
   margin: auto;

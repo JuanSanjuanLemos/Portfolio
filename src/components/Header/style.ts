@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   max-width: 1440px;
+  margin: auto;
   padding: 0 1rem;
+  background-color: var(--main-color);
   .content {
     margin: auto;
     padding: 2.5rem 0;

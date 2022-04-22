@@ -1,10 +1,12 @@
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { ChakraProvider } from '@chakra-ui/react';
-import { Header } from '../components/Header';
-import { useState } from 'react';
-import { darkTheme, GlobalStyle, lightTheme } from '../styles/global';
-import { ThemeProvider } from 'styled-components';
+import type { AppProps } from "next/app";
+
+import Head from "next/head";
+import { Header } from "../components/Header";
+import { useState } from "react";
+
+import { ThemeProvider } from "styled-components";
+
+import { darkTheme, GlobalStyle, lightTheme } from "../../styles/global";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("dark");
@@ -14,13 +16,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   const toggleTheme = () => setTheme(isDarkTheme ? "light" : "dark");
 
-  return(
-    <ChakraProvider>
-      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-
+  return (
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Head>
         <title>Portfólio</title>
       </Head>
+
       <Header>
         <button className={`button-theme -${themeName}`} onClick={toggleTheme}>
           {isDarkTheme ? (
@@ -34,10 +35,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           )}
         </button>
       </Header>
+
       <Component {...pageProps} />
       <GlobalStyle />
-
-      </ThemeProvider>
-    </ChakraProvider>
-  )
+    </ThemeProvider>
+  );
 }

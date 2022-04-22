@@ -1,14 +1,5 @@
-import {
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-
 import { BsList } from "react-icons/bs";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState} from "react";
 
 import { Container } from "./style";
 
@@ -17,16 +8,16 @@ interface HeaderProps{
 }
 
 export function Header({children}:HeaderProps) {
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    md: true,
-  });
-
+  const [wideSize ,setWizeSize] = useState(0);
+  useEffect(()=>{
+    setWizeSize(window.innerWidth)
+    console.log(wideSize)
+  },[])
   return (
     <Container>
       <div className="content">
         <p className="logo">Portfólio</p>
-        {isWideVersion ? (
+        {wideSize > 768 ? (
           <ul>
             <li>
               <a href="#home">Home</a>
@@ -42,28 +33,7 @@ export function Header({children}:HeaderProps) {
             </li>
           </ul>
         ) : (
-          <Menu>
-            <MenuButton
-              as={IconButton}
-              aria-label="Options"
-              variant="unstyled"
-              className="button-menu"
-              fontSize="2rem"
-              icon={<BsList />}
-            />
-            <MenuList className="wrapper-menu">
-              <MenuItem>
-                <a href="#home">Home</a>
-              </MenuItem>
-              <MenuItem>
-                <a href="#about-me">Sobre mim</a>
-              </MenuItem>
-              <MenuItem>
-                <a href="#projects">Projetos</a>
-              </MenuItem>
-                {children}
-            </MenuList>
-          </Menu>
+          <p>Mobile {children}</p>
         )}
       </div>
     </Container>
