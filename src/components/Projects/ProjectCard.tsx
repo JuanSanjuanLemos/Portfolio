@@ -28,6 +28,7 @@ export function ProjectCard({
           layout="fill"
           src={`/images/projects/${imgFileName}`}
           alt={name}
+          priority
         />
       </div>
       <h2>{name}</h2>

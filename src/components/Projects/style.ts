@@ -38,14 +38,15 @@ export const Container = styled.section`
 
 export const Card = styled.article`
   .project-image{
-    width: 530px;
-    height: 250px;
-    object-fit: contain;
     max-width: 100%;
     position: relative;
     margin-bottom: 2.5rem;
     border-radius: 4px 0px 0px 4px;
     border-left: 4px solid var(--blue);
+    padding-bottom: 47%;
+    img{
+      object-fit: fill;
+    }
   }
   h2{
     font-size: 1.5rem;
