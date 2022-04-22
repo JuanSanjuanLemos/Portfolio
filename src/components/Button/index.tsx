@@ -1,18 +1,21 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 import { ButtonLink } from "./style";
 
 interface ButtonProps{
   color: string;
   text: string;
-  imgURL: string;
+  children: ReactNode;
   link: string;
 }
 
-export function Button({color, text,link, imgURL}:ButtonProps){
+export function Button({color, text,link, children}:ButtonProps){
   return(
     <a href={link} rel="noopener noreferrer" target='_blank'>
       <ButtonLink className={color=== 'blue' ? '-button-blue' : '-button-pink'}>
-        <Image height='24px' width='24px' src={imgURL} alt={text} />
+        <span>
+          {children}
+        </span>
         {text}
       </ButtonLink>
     </a>

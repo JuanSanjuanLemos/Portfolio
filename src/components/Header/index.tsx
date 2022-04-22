@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState} from "react";
+import { ReactNode} from "react";
 import useWindowDimensions from "../../hooks/UseWindowDimension";
 import { Menu } from "../Menu";
 
@@ -30,7 +30,9 @@ export function Header({children}:HeaderProps) {
             </li>
           </ul>
         ) : (
-          <Menu children={children} />
+          <Menu>
+            {children}
+          </Menu>
         )}
       </div>
     </Container>

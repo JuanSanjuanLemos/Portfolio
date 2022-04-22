@@ -4,6 +4,7 @@ import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 import { Button } from "../Button";
 import Image from "next/image";
+import { FiDownloadCloud, FiMail } from "react-icons/fi";
 
 export function AboutMe() {
   return (
@@ -50,15 +51,18 @@ export function AboutMe() {
             <Button
               color="pink"
               link="/files/Currículo.pdf"
-              imgURL="/images/download-cloud.svg"
               text="Currículo"
-            />
+            >
+              {<FiDownloadCloud />}
+            </Button>
             <Button
               color="blue"
               link="mailto:juansanjuan.dev@gmail.com"
-              imgURL="/images/mail.svg"
               text="Email"
-            />
+            >
+              {<FiMail />}
+
+            </Button>
           </div>
         </article>
       </div>

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { FiLink } from "react-icons/fi";
 import { Button } from "../Button";
 
 import { Card } from "./style";
 
-interface ProjectCardProps{
+interface ProjectCardProps {
   name: string;
   description: string;
   technologies: string;
@@ -12,19 +13,42 @@ interface ProjectCardProps{
   imgFileName: string;
 }
 
-export function ProjectCard({description,imgFileName,linkProject,linkRepository,name,technologies}:ProjectCardProps){
-  return(
+export function ProjectCard({
+  description,
+  imgFileName,
+  linkProject,
+  linkRepository,
+  name,
+  technologies,
+}: ProjectCardProps) {
+  return (
     <Card>
       <div className="project-image">
-        <Image layout="fill" src={`/images/projects/${imgFileName}`} alt={name} />
+        <Image
+          layout="fill"
+          src={`/images/projects/${imgFileName}`}
+          alt={name}
+        />
       </div>
       <h2>{name}</h2>
       <p className="description">{description}</p>
       <p className="technologies">{technologies}</p>
       <div className="wrapper-button">
-        <Button color="blue" imgURL="/images/link.svg" link={linkProject} text="Visualizar" />
-        <Button color="pink" imgURL="/images/link.svg" link={linkRepository} text="Repositório" />
+        <Button
+          color="blue"
+          link={linkProject}
+          text="Visualizar"
+        >
+          {<FiLink />}
+        </Button>
+        <Button
+          color="pink"
+          link={linkRepository}
+          text="Repositório"
+        >
+          {<FiLink />}
+        </Button>
       </div>
     </Card>
-  )
+  );
 }

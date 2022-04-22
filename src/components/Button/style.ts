@@ -22,7 +22,13 @@ export const ButtonLink = styled.button`
   font-weight: 600;
   line-height: 1.18;
   color: var(--text);
-
+  span{
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    font-weight: 600;
+    line-height: 1;
+  }
   &.-button-pink{
     border-image: linear-gradient(
       132.33deg,
