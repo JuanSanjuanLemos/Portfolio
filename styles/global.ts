@@ -82,16 +82,4 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
             background-color: #000;
         }
     }
-
-    @media (max-width: 768px){
-        .button-theme{
-            margin-left: 1rem;
-            &.-dark{
-                background-color: #000;
-        }
-            &.-light{
-                background-color: #fff;
-            }
-        }
-    }
 `;

@@ -1,5 +1,6 @@
-import { BsList } from "react-icons/bs";
 import { ReactNode, useEffect, useState} from "react";
+import useWindowDimensions from "../../hooks/UseWindowDimension";
+import { Menu } from "../Menu";
 
 import { Container } from "./style";
 
@@ -8,17 +9,13 @@ interface HeaderProps{
 }
 
 export function Header({children}:HeaderProps) {
-  const [wideSize ,setWizeSize] = useState(0);
-  useEffect(()=>{
-    setWizeSize(window.innerWidth)
-    console.log(wideSize)
-  },[])
+  const {width} = useWindowDimensions();
   return (
     <Container>
       <div className="content">
         <p className="logo">Portfólio</p>
-        {wideSize > 768 ? (
-          <ul>
+        {width > 768 ? (
+          <ul className="ul-md">
             <li>
               <a href="#home">Home</a>
             </li>
@@ -33,7 +30,7 @@ export function Header({children}:HeaderProps) {
             </li>
           </ul>
         ) : (
-          <p>Mobile {children}</p>
+          <Menu children={children} />
         )}
       </div>
     </Container>

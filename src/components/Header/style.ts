@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  position: relative;
+  width: 100%;
   max-width: 1440px;
   margin: auto;
   padding: 0 1rem;
@@ -21,7 +23,7 @@ export const Container = styled.header`
       font-weight: 500;
       line-height: 1.22;
     }
-    ul {
+    .ul-md {
       list-style: none;
       display: flex;
       align-items: center;
@@ -30,21 +32,6 @@ export const Container = styled.header`
         color: var(--text);
         font-size: 1.125rem;
         line-height: 1.22;
-      }
-    }
-
-    .button-menu {
-      color: var(--text);
-    }
-    .wrapper-menu {
-      background-color: var(--text);
-      width: 90vw;
-      color: var(--main-color);
-      button{
-        &:focus {
-          background-color: inherit;
-          filter: brightness(0.8);
-        }
       }
     }
   }
