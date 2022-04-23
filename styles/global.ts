@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components/";
+import { createGlobalStyle} from "styled-components";
 
 interface ThemeStyle {
   mainColor: string;
@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
     }
 
     body{
-        background-color: var(--main-color) ;
+        background-color: var(--main-color);
     }
 
     body, input, textarea, button{

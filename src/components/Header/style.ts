@@ -1,4 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--text);
+`;
+
+const sizeOpen = keyframes`
+  from{
+    width: 40vh;
+  }
+  to{
+    width: 100vh;
+  }
+`;
 
 export const Container = styled.header`
   position: relative;
@@ -36,3 +52,28 @@ export const Container = styled.header`
     }
   }
 `;
+
+export const Menu = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  z-index: 10;
+  animation: ${sizeOpen} 0.4s linear;
+  .button-close{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  .ul-sm{
+    color: var(--text);
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    li{
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
