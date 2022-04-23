@@ -9,7 +9,7 @@ export const Button = styled.button`
 
 const sizeOpen = keyframes`
   from{
-    width: 40vh;
+    width: 60vh;
   }
   to{
     width: 100vh;
@@ -60,7 +60,7 @@ export const Menu = styled.div`
   height: 100vh;
   background-color: var(--main-color);
   z-index: 10;
-  animation: ${sizeOpen} 0.4s linear;
+  animation: ${sizeOpen} 0.2s linear;
   .button-close{
     position: absolute;
     right: 1rem;

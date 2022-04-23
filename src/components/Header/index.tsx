@@ -13,6 +13,11 @@ export function Header({ children }: HeaderProps) {
   const { width } = useWindowDimensions();
   const [isOpen, setIsOpen] = useState(false);
 
+  function toggleIsOpen(){
+    setIsOpen(!isOpen);
+  }
+  
+
   return (
     <>
       <Container>
@@ -32,7 +37,7 @@ export function Header({ children }: HeaderProps) {
               <li>{children}</li>
             </ul>
           ) : (
-              <Button onClick={() => setIsOpen(!isOpen)}>
+              <Button onClick={toggleIsOpen}>
                 <BsList />
               </Button>
               
@@ -41,18 +46,18 @@ export function Header({ children }: HeaderProps) {
       </Container>
       {isOpen && (
         <Menu>
-          <Button onClick={() => setIsOpen(!isOpen)} className='button-close'>
+          <Button onClick={toggleIsOpen} className='button-close'>
                 <BsXLg />
           </Button>
           <ul className="ul-sm">
             <li>
-              <a href="#home">Home</a>
+              <a onClick={toggleIsOpen} href="#home">Home</a>
             </li>
             <li>
-              <a href="#about-me">Sobre mim</a>
+              <a onClick={toggleIsOpen} href="#about-me">Sobre mim</a>
             </li>
             <li>
-              <a href="#projects">Projetos</a>
+              <a onClick={toggleIsOpen} href="#projects">Projetos</a>
             </li>
             <li>{children}</li>
           </ul>
