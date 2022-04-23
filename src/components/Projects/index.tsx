@@ -14,7 +14,7 @@ export function Projects() {
               A ideia desta aplicação é mostrar dados sobres os Continentes, 
               dentre esses dados quantas cidades do continente fazem partes do TOP 100
               cidades mais visitadas do mundo."
-            imgFileName="worldtrip.png"
+            imgFileName="worldtrip.gif"
             linkProject="https://worldtrip-beta-five.vercel.app/"
             linkRepository="https://github.com/JuanSanjuanLemos/worldtrip"
             technologies="Chakra UI, Swiper, NextJS, Typescript e MirageJs"
