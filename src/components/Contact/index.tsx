@@ -3,9 +3,9 @@ import { Container } from "./styles";
 
 export function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <div className="content">
-        <h1 id="contact">Vamos conversar?</h1>
+        <h1>Vamos conversar?</h1>
         <div className="wrapper-social">
           <a
             href="https://www.linkedin.com/in/juan-lemos-75830b1a2/"

@@ -6,7 +6,7 @@ import { SiChakraui, SiNextdotjs } from "react-icons/si";
 
 export function Skills(){
   return(
-    <Container>
+    <Container id="skills">
       <div className="content">
         <h1>Minhas Skills</h1>
         <div className="wrapper-cards">

@@ -21,7 +21,7 @@ export function Header({ children }: HeaderProps) {
       <Container>
         <div className="content">
           <p className="logo">Portfólio</p>
-          {width > 768 ? (
+          {width > 992 ? (
             <ul className="ul-md">
               <li>
                 <a href="#home">Home</a>
@@ -31,6 +31,9 @@ export function Header({ children }: HeaderProps) {
               </li>
               <li>
                 <a href="#projects">Projetos</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
               </li>
               <li>
                 <a href="#contact">Contato</a>
@@ -63,6 +66,11 @@ export function Header({ children }: HeaderProps) {
             <li>
               <a onClick={toggleIsOpen} href="#projects">
                 Projetos
+              </a>
+            </li>
+            <li>
+              <a onClick={toggleIsOpen} href="#skills">
+                Skills
               </a>
             </li>
             <li>
