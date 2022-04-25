@@ -35,18 +35,10 @@ export function ProjectCard({
       <p className="description">{description}</p>
       <p className="technologies">{technologies}</p>
       <div className="wrapper-button">
-        <Button
-          color="blue"
-          link={linkProject}
-          text="Visualizar"
-        >
+        <Button color="blue" link={linkProject} text="Visualizar">
           {<FiLink />}
         </Button>
-        <Button
-          color="pink"
-          link={linkRepository}
-          text="Repositório"
-        >
+        <Button color="pink" link={linkRepository} text="Repositório">
           {<FiLink />}
         </Button>
       </div>

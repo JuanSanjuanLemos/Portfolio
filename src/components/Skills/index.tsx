@@ -31,6 +31,9 @@ export function Skills(){
           <SkillCard color="-blue">
             <SiChakraui />
           </SkillCard>
+          <SkillCard color="-pink">
+            <DiBootstrap />
+          </SkillCard>
         </div>
       </div>
     </Container>

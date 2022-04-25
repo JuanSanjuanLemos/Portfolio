@@ -68,12 +68,12 @@ export const Container = styled.section`
   }
 
   @media (max-width: 576px) {
-    .content article .wrapper-buttons{
+    .content article .wrapper-buttons {
       gap: 2rem;
     }
   }
   @media (max-width: 992px) {
-    .content{
+    .content {
       justify-content: center;
     }
   }

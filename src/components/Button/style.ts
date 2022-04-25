@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonLink = styled.button`
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,8 @@ export const ButtonLink = styled.button`
   border: double 2px transparent;
   border-radius: 4px;
 
-  background-image: linear-gradient(var(--main-color), var(--main-color)), radial-gradient(circle at top left, transparent, transparent);
+  background-image: linear-gradient(var(--main-color), var(--main-color)),
+    radial-gradient(circle at top left, transparent, transparent);
   background-origin: border-box;
   background-clip: content-box, border-box;
 
@@ -22,22 +23,23 @@ export const ButtonLink = styled.button`
   font-weight: 600;
   line-height: 1.18;
   color: var(--text);
-  span{
+  transition: color 0.2s linear;
+  span {
     font-size: 24px;
     height: 24px;
     width: 24px;
     font-weight: 600;
     line-height: 1;
   }
-  &.-button-pink{
-    border-image: linear-gradient(
-      132.33deg,
-      #d24074 -0.67%,
-      #6518b4 102.54%
-    ) 1;
+  &.-button-pink {
+    border-image: linear-gradient(132.33deg, #d24074 -0.67%, #6518b4 102.54%) 1;
   }
 
-  &.-button-blue{
+  &.-button-blue {
     border-image: linear-gradient(51.06deg, #9358f7 0.87%, #10d7e2 97.48%) 1;
+  }
+
+  &:hover {
+    color: var(--hover);
   }
 `;

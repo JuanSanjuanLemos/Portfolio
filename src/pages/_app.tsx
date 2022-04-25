@@ -8,6 +8,8 @@ import { ThemeProvider } from "styled-components";
 
 import { darkTheme, GlobalStyle, lightTheme } from "../../styles/global";
 
+import { FaMoon, FaSun } from "react-icons/fa";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("dark");
   let themeName = "dark";
@@ -26,11 +28,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <button className={`button-theme -${themeName}`} onClick={toggleTheme}>
           {isDarkTheme ? (
             <span aria-label="Light mode" role="img">
-              🌞
+              <FaSun />
             </span>
           ) : (
             <span aria-label="Dark mode" role="img">
-              🌜
+              <FaMoon />
             </span>
           )}
         </button>

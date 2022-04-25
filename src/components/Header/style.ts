@@ -9,7 +9,7 @@ export const Button = styled.button`
 
 const sizeOpen = keyframes`
   from{
-    width: 60vh;
+    width: 55vh;
   }
   to{
     width: 100vh;
@@ -45,9 +45,15 @@ export const Container = styled.header`
       align-items: center;
       gap: 4rem;
       li {
-        color: var(--text);
         font-size: 1.125rem;
         line-height: 1.22;
+        padding: 0.4rem;
+        border-radius: 1rem;
+        transition: background 0.2s linear;
+        color: var(--text);
+        &:hover {
+          background-color: var(--hover);
+        }
       }
     }
   }
@@ -60,20 +66,19 @@ export const Menu = styled.div`
   height: 100vh;
   background-color: var(--main-color);
   z-index: 10;
-  animation: ${sizeOpen} 0.2s linear;
-  .button-close{
+  animation: ${sizeOpen} 0.15s linear;
+  .button-close {
     position: absolute;
     right: 1rem;
     top: 1rem;
   }
-  .ul-sm{
+  .ul-sm {
     color: var(--text);
     list-style: none;
     font-size: 1.5rem;
     margin: 1rem 1rem;
-    li{
+    li {
       margin-bottom: 1rem;
     }
   }
 `;
-

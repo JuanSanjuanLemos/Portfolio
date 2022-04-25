@@ -11,11 +11,7 @@ export function AboutMe() {
     <Container id="about-me">
       <div className="content">
         <div className="imageProfile">
-          <Image
-            layout="fill"
-            src="/images/foto.png"
-            alt="Foto Juan"
-          />
+          <Image layout="fill" src="/images/foto.png" alt="Foto Juan" />
         </div>
         <article>
           <h1>Sobre Mim</h1>
@@ -48,11 +44,7 @@ export function AboutMe() {
             </li>
           </ul>
           <div className="wrapper-buttons">
-            <Button
-              color="pink"
-              link="/files/Currículo.pdf"
-              text="Currículo"
-            >
+            <Button color="pink" link="/files/Currículo.pdf" text="Currículo">
               {<FiDownloadCloud />}
             </Button>
             <Button
@@ -61,7 +53,6 @@ export function AboutMe() {
               text="Email"
             >
               {<FiMail />}
-
             </Button>
           </div>
         </article>

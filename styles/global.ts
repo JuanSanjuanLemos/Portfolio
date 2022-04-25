@@ -1,4 +1,4 @@
-import { createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 interface ThemeStyle {
   mainColor: string;
@@ -6,23 +6,31 @@ interface ThemeStyle {
   text: string;
   textSecond: string;
   blue: string;
+  icon: string;
+  body: string;
+  hover: string;
 }
 
-
 export const lightTheme = {
-    mainColor: "#ebebeb",
-    mainColor200: "#c4c4c4",
-    text: "#121212",
-    textSecond: "#151515",
-    blue: "#2236c5",
-  };
-  export const darkTheme = {
-    mainColor: "#121212",
-    mainColor200: "#151515",
-    text: "#fff",
-    textSecond: "#c4c4c4",
-    blue: "#00D2DF",
-  };
+  mainColor: "#ebebeb",
+  mainColor200: "#c4c4c4",
+  text: "#121212",
+  textSecond: "#151515",
+  blue: "#2236c5",
+  icon: "#5c5c5c",
+  body: "#f3f3f3",
+  hover: "#b9b9b9",
+};
+export const darkTheme = {
+  mainColor: "#121212",
+  mainColor200: "#151515",
+  text: "#fff",
+  textSecond: "#c4c4c4",
+  blue: "#00D2DF",
+  icon: "#fefefe",
+  body: "#040404",
+  hover: "#383838"
+};
 
 export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
     :root {
@@ -31,6 +39,9 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
         --text: ${({ theme }) => theme.text};
         --text-second: ${({ theme }) => theme.textSecond};
         --blue: ${({ theme }) => theme.blue};
+        --icon: ${({ theme }) => theme.icon};
+        --body: ${({ theme }) => theme.body};
+        --hover: ${({theme}) => theme.hover};
     }
     *{
         margin: 0;
@@ -52,11 +63,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
             font-size: 87.5%;
         }
     }
-
     body{
-        background-color: var(--main-color);
+        background-color: var(--body);
     }
-
+    body, body > *{
+        transition: background 0.3s linear;
+    }
     body, input, textarea, button{
         font: 400 1rem "Inter", sans-serif;
     }
@@ -73,13 +85,25 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
     .button-theme{
         height: 30px;
         width: 30px;
+        background-color: #000;
+
+        border: none;
         border-radius: 50%;
-        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         &.-dark{
-            background-color: #fff;
+            color: yellow;
         }
         &.-light{
-            background-color: #000;
+            color: #fff;
+        }
+
+        font-size: 1rem;
+        span{
+            height: 1rem;
         }
     }
 `;

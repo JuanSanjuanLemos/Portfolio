@@ -22,7 +22,7 @@ export const Container = styled.section`
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(7rem, 7rem));
       justify-content: space-between;
-      gap: 3.8rem;
+      gap: 2rem;
     }
   }
 `;
@@ -45,10 +45,16 @@ export const Card = styled.div`
   font-size: 4.5rem;
   color: var(--text);
 
-  &.-pink{
+  transition: color 0.2s linear;
+
+  &.-pink {
     border-image: linear-gradient(132.33deg, #d24074 -0.67%, #6518b4 102.54%) 1;
   }
-  &.-blue{
+  &.-blue {
     border-image: linear-gradient(51.06deg, #9358f7 0.87%, #10d7e2 97.48%) 1;
+  }
+
+  &:hover {
+    color: var(--hover);
   }
 `;
