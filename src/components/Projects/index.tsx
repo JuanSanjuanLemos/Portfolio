@@ -28,6 +28,15 @@ export function Projects() {
             linkRepository="https://github.com/JuanSanjuanLemos/RocketNFTs"
             technologies="HTML, CSS, SASS Javascript"
           />
+          <ProjectCard
+            name="Traveler(em desenvolvimento)"
+            description="
+              Um site que apresenta os princípais locais para se visitar nas cidades de Santa Catarina "
+            imgFileName="traveler.gif"
+            linkProject="https://traveler-vue.vercel.app/"
+            linkRepository="https://github.com/JuanSanjuanLemos/Traveler-vue"
+            technologies="VueJs, Typescript, Miragejs, Axios e SASS"
+          />
         </div>
       </div>
     </Container>
