@@ -37,6 +37,15 @@ export function Projects() {
             linkRepository="https://github.com/JuanSanjuanLemos/Traveler-vue"
             technologies="VueJs, Typescript, Miragejs, Axios e SASS"
           />
+          <ProjectCard
+            name="To do Pomo"
+            description="
+              Uma aplicação simples e prática para o uso do método pomodro"
+            imgFileName="to-do-pomo.gif"
+            linkProject="https://to-do-pomo.vercel.app/"
+            linkRepository="https://github.com/JuanSanjuanLemos/to-do-pomo"
+            technologies="Nextjs, Typescript e Styled Components"
+          />
         </div>
       </div>
     </Container>

@@ -42,7 +42,7 @@
 <br>
 <h1 id='projeto'>🔗Projeto</h1>
 <p>
-  Link para o projeto na vercel: <a>https://portfolio-juan-lemos.vercel.app/</a>
+  Link para o projeto na vercel: <a>https://to-do-pomo.vercel.app/</a>
 </p>
 
 <br>
