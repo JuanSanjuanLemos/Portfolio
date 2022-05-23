@@ -1,9 +1,5 @@
-import getPrismicClient from "../../services/prismic";
-import * as prismic from "@prismicio/client";
-
 import { ProjectCard } from "./ProjectCard";
 import { Container } from "./style";
-import { GetStaticProps } from "next";
 
 interface ProjectsProps{
   projects:{

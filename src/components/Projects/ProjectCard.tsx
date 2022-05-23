@@ -29,6 +29,7 @@ export function ProjectCard({
           src={`${urlImage}`}
           alt={name}
           priority
+          placeholder={"blur"}
         />
       </div>
       <h2>{name}</h2>
