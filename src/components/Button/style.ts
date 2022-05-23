@@ -6,8 +6,7 @@ export const ButtonLink = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  width: 9.56rem;
-  height: 2.81rem;
+  padding: 0.7rem 0.8rem;
 
   background-color: transparent;
 
@@ -25,9 +24,9 @@ export const ButtonLink = styled.button`
   color: var(--text);
   transition: color 0.2s linear;
   span {
-    font-size: 24px;
-    height: 24px;
-    width: 24px;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
     font-weight: 600;
     line-height: 1;
   }

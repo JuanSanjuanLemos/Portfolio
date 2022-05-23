@@ -43,6 +43,11 @@ export const Card = styled.article`
   padding: 2rem;
   border-radius: 1rem;
   background-color: var(--main-color-200);
+  @media (max-width: 420px) {
+    &{
+      padding: 1rem;
+    }
+  }
   &:hover{
     transform: translateY(-4%);
   }
@@ -92,5 +97,11 @@ export const Card = styled.article`
     bottom: 2rem;
     display: flex;
     gap: 2rem;
+    @media (max-width: 420px) {
+    &{
+      gap: 0.5rem;
+      bottom: 1rem;
+    }
+  }
   }
 `;
