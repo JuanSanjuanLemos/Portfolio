@@ -10,12 +10,12 @@ interface ProjectCardProps {
   technologies: string;
   linkProject: string;
   linkRepository: string;
-  imgFileName: string;
+  urlImage: string;
 }
 
 export function ProjectCard({
   description,
-  imgFileName,
+  urlImage,
   linkProject,
   linkRepository,
   name,
@@ -26,7 +26,7 @@ export function ProjectCard({
       <div className="project-image">
         <Image
           layout="fill"
-          src={`/images/projects/${imgFileName}`}
+          src={`${urlImage}`}
           alt={name}
           priority
         />

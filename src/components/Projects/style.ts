@@ -38,6 +38,14 @@ export const Container = styled.section`
 
 export const Card = styled.article`
   position: relative;
+  transition: transform 0.5s ease-in-out;
+  border: 2px solid var(--text);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--main-color-200);
+  &:hover{
+    transform: translateY(-4%);
+  }
   .project-image {
     max-width: 100%;
     position: relative;
@@ -81,7 +89,7 @@ export const Card = styled.article`
 
   .wrapper-button {
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     display: flex;
     gap: 2rem;
   }
