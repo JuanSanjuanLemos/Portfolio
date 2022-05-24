@@ -18,11 +18,8 @@ const sizeOpen = keyframes`
 
 export const Container = styled.header`
   position: relative;
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
   padding: 0 1rem;
-  background-color: var(--main-color);
+  background-color: var(--main-color-200);
   .content {
     margin: auto;
     padding: 2.5rem 0;

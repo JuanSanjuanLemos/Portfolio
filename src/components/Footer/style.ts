@@ -2,9 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
   background-color: var(--main-color-200);
-
-  max-width: 1440px;
-  margin: auto;
   padding: 2.5rem 0;
 
   .content {
