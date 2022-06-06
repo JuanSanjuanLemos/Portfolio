@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   background-color: var(--main-color-200);
 
-  padding: 6.25rem 0;
+  padding: 6.25rem 3rem;
 
   .content {
     max-width: 1440px;

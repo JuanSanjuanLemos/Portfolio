@@ -109,6 +109,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
     .container{
         padding-left: 3rem;
         padding-right: 3rem;
+        
         @media (max-width: 1024px) {
             &{
                 padding-left: 2rem;
