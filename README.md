@@ -42,7 +42,7 @@
 <br>
 <h1 id='projeto'>🔗Projeto</h1>
 <p>
-  Link para o projeto na vercel: <a>https://to-do-pomo.vercel.app/</a>
+  Link para o projeto na vercel: <a href="https://to-do-pomo.vercel.app/" target="_blank">https://to-do-pomo.vercel.app/</a>
 </p>
 
 <br>
@@ -65,7 +65,7 @@ Copyright (c) 2022 Juan Lemos
 </p>
 
 <div>
-  <a href="https://instagram.com/_juan.lemos_" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-  <a href = "mailto:juansanjuan.dev@gmail.com"><img src="https://img.shields.io/badge/-juansanjuan.dev@gmail.com-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/juan-lemos-75830b1a2/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href="https://instagram.com/_juan.lemos_" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+  <a href = "mailto:juansanjuan.dev@gmail.com"><img src="https://img.shields.io/badge/-juansanjuan.dev@gmail.com-%23333?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/juan-lemos-75830b1a2/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> 
 </div>
