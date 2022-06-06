@@ -18,7 +18,7 @@ export function Header({ children }: HeaderProps) {
 
   return (
     <>
-      <Container>
+      <Container className="container">
         <div className="content">
           <p className="logo">Portfólio</p>
           {width > 992 ? (

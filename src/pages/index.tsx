@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
       urlImage: project.data.image.url,
       technologies: RichText.asText(project.data.tecnologies)as string,
       urlWebSite: project.data.website.url,
-      urlRepository: project.data.website.url,
+      urlRepository: project.data.repositore.url,
     }
   })
 

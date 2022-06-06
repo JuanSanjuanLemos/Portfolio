@@ -28,7 +28,7 @@ export function ProjectCard({
           layout="fill"
           src={`${urlImage}`}
           alt={name}
-          priority
+          priority={false}
           placeholder={"blur"}
           blurDataURL = {"/images/loader.gif"}
         />

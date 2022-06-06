@@ -32,14 +32,16 @@ export const Container = styled.section`
     background-image: url("/images/bg-image.svg");
     background-repeat: no-repeat;
     background-position: 100% -0;
-    max-width: 1440px;
     animation: ${transform} 4s linear infinite;
+
+    max-width: 1440px;
     margin: auto;
-    padding: 9.5rem 1rem 13rem;
+    padding: 9.5rem 0 13rem;
+    display: flex;
+    justify-content: space-between;
     
       .presentation-content {
         max-width: 1160px;
-        margin: auto;
         animation: ${opacity} 1.5s ease-in-out ;
         .wrapper-texts {
           font-weight: 600;

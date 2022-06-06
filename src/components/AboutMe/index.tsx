@@ -8,7 +8,7 @@ import { FiDownloadCloud, FiMail } from "react-icons/fi";
 
 export function AboutMe() {
   return (
-    <Container id="about-me">
+    <Container id="about-me" className="container">
       <div className="content">
         <div className="imageProfile">
           <Image layout="fill" priority src="/images/foto.png" alt="Foto Juan" />

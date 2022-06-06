@@ -15,7 +15,7 @@ interface ProjectsProps{
 
 export function Projects({projects}:ProjectsProps) {
   return (
-    <Container id="projects">
+    <Container id="projects" className="container">
       <div className="content">
         <h1>Projetos</h1>
 

@@ -4,7 +4,7 @@ import { Container } from "./style";
 
 export function Presentation(){
   return(
-    <Container id="home">
+    <Container id="home" className="container">
       <div className="box-image">
         <div className="presentation-content">
           <div className="wrapper-texts">

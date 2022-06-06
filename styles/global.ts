@@ -106,4 +106,20 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeStyle }>`
             height: 1rem;
         }
     }
+    .container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        @media (max-width: 1024px) {
+            &{
+                padding-left: 2rem;
+                padding-right: 2rem;
+            } 
+        }
+        @media (max-width: 576px) {
+            &{
+                padding-left: 1rem;
+                padding-right: 1rem;
+            } 
+        }
+    }
 `;

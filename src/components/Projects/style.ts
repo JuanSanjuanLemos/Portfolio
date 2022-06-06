@@ -5,7 +5,8 @@ export const Container = styled.section`
   padding: 6.25rem 1rem;
 
   .content {
-    max-width: 1160px;
+    max-width: 1440px;
+
     margin: auto;
 
     h1 {

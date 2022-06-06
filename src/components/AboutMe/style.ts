@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Container = styled.section`
   background-color: var(--main-color-200);
 
-  padding: 6.25rem 1rem;
+  padding: 6.25rem 0;
 
   .content {
-    max-width: 1160px;
+    max-width: 1440px;
+
     margin: auto;
     display: flex;
     flex-wrap: wrap;
