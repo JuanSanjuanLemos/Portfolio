@@ -11,7 +11,7 @@ export function AboutMe() {
     <Container id="about-me">
       <div className="content">
         <div className="imageProfile">
-          <Image layout="fill" src="/images/foto.png" alt="Foto Juan" />
+          <Image layout="fill" priority src="/images/foto.png" alt="Foto Juan" />
         </div>
         <article>
           <h1>Sobre Mim</h1>
